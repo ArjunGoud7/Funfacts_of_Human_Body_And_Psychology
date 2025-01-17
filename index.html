@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #becbd2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .fact-display {
+            font-size: 18px;
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2463a7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About the Human Body and Psychology</h1>
+        <div id="fact-display" class="fact-display">
+            Click the button to generate a fun fact!
+        </div>
+        <button id="generate-fact-btn">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                "factNumber": 1,
+                "title": "Brain Power",
+                "description": "The human brain generates enough electricity to power a small light bulb, approximately 20 watts."
+            },
+            {
+                "factNumber": 2,
+                "title": "Memory Capacity",
+                "description": "The brain's storage capacity is virtually unlimited, with estimates suggesting it can hold around 2.5 petabytes of information."
+            },
+            {
+                "factNumber": 3,
+                "title": "Unique Fingerprints",
+                "description": "No two people have the same fingerprints, not even identical twins."
+            },
+            {
+                "factNumber": 4,
+                "title": "Dreams",
+                "description": "On average, a person has about four to six dreams per night, but most are forgotten by morning."
+            },
+            {
+                "factNumber": 5,
+                "title": "Heartbeats",
+                "description": "The average human heart beats about 100,000 times a day, pumping around 2,000 gallons of blood."
+            },
+            {
+                "factNumber": 6,
+                "title": "Taste Buds",
+                "description": "Taste buds are replaced every 10 to 14 days, allowing for the renewal of taste sensations."
+            },
+            {
+                "factNumber": 7,
+                "title": "Bone Count",
+                "description": "Babies are born with approximately 270 bones, but as they grow, some bones fuse together, resulting in 206 bones in adults."
+            },
+            {
+                "factNumber": 8,
+                "title": "Blinking",
+                "description": "Humans blink around 15 to 20 times per minute, which helps keep the eyes moist and free of debris."
+            },
+            {
+                "factNumber": 9,
+                "title": "Psychological Influence",
+                "description": "The placebo effect demonstrates the power of the mind, where people experience real changes in their health after taking a treatment with no therapeutic value."
+            },
+            {
+                "factNumber": 10,
+                "title": "Laughter",
+                "description": "Laughter has been shown to reduce stress and increase pain tolerance, acting as a natural mood booster."
+            },
+            {
+                "factNumber": 11,
+                "title": "Skin Regeneration",
+                "description": "The human skin completely renews itself approximately every 28 days."
+            },
+            {
+                "factNumber": 12,
+                "title": "Color Perception",
+                "description": "Women generally have a better ability to distinguish between subtle shades of color compared to men."
+            },
+            {
+                "factNumber": 13,
+                "title": "Yawning",
+                "description": "Yawning is contagious and is believed to help increase alertness by bringing more oxygen to the brain."
+            },
+            {
+                "factNumber": 14,
+                "title": "Emotional Tears",
+                "description": "Humans are the only species known to produce emotional tears, which can help reduce stress and improve mood."
+            },
+            {
+                "factNumber": 15,
+                "title": "Gut Feeling",
+                "description": "The gut is often referred to as the 'second brain' because it contains about 100 million neurons and can influence emotions and decision-making."
+            }
+        ];
+
+        document.getElementById('generate-fact-btn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const fact = facts[randomIndex];
+         var x =   document.getElementById('fact-display') ;
+         x.innerText = `${fact.title}: ${fact.description}`
+         x.style.color = "blue"
+         x.style.fontSize= "20px"
+         x.style.fontFamily = "Georgia,serif"
+         
+        });
+    </script>
+</body>
+</html>
